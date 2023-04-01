@@ -6,9 +6,7 @@ import { IBeersProps } from "types";
 import styles from "./NoBeers.module.scss";
 
 const NoBeers = (props: IBeersProps) => {
-  const { myBeers, toggleAddBeerModal } = props.beers;
-
-  if (myBeers.length) return null;
+  const { toggleAddBeerModal } = props.beers;
 
   return (
     <section className={styles.Container}>

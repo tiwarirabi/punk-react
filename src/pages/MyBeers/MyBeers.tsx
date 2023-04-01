@@ -1,6 +1,6 @@
 import React from "react";
 
-import Beer from "components/Beer/Beer";
+import BeersList from "components/BeersList/BeersList";
 import NoBeers from "components/NoBeers/NoBeers";
 
 import { withBeers } from "store/Beer";
@@ -13,16 +13,7 @@ const MyBeers = (props: IBeersProps) => {
 
   return (
     <section className={styles.Container}>
-      <section
-        className={`${styles.ListContainer} ${
-          myBeers.length === 1 ? styles.SingleInListContainer : ""
-        }`}
-      >
-        {myBeers.map((beer) => (
-          <Beer beer={beer} />
-        ))}
-      </section>
-      <NoBeers />
+      {myBeers.length ? <BeersList beers={myBeers} /> : <NoBeers />}
     </section>
   );
 };

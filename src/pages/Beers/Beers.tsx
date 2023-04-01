@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-import Beer from "components/Beer/Beer";
 import Spinner from "components/Spinner/Spinner";
+import BeersList from "components/BeersList/BeersList";
 
 import { withBeers } from "store/Beer";
 import { IBeersProps } from "types";
@@ -19,11 +19,7 @@ const Beers = (props: IBeersProps) => {
 
   return (
     <section className={styles.Container}>
-      <section className={styles.ListContainer}>
-        {beers.map((beer) => (
-          <Beer beer={beer} />
-        ))}
-      </section>
+      <BeersList beers={beers} />
       <section className={styles.FetchMoreContainer}>
         {fetchingBeers ? (
           <Spinner />

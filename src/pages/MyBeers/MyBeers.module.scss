@@ -4,19 +4,4 @@
   color: $text-color;
   max-width: $max-width;
   margin: 0px auto;
-
-  .ListContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
-
-    @media (max-width: $breakpoint-medium) {
-      grid-template-columns: 1fr;
-      margin: 0px 10px;
-    }
-  }
-
-  .SingleInListContainer {
-    grid-template-columns: 1fr;
-  }
 }
