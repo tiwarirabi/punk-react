@@ -1,0 +1,30 @@
+@import "index.scss";
+
+.Container {
+  height: calc(100vh - $header-height - 50px);
+  background-color: $lightest-grey;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+  .CenterContainer {
+    display: block;
+    margin-top: 100px;
+  }
+
+  .Text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $light-black;
+  }
+
+  .Button {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: transparent;
+    border: 0px;
+    color: #3767b7;
+  }
+}

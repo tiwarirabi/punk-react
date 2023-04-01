@@ -1,0 +1,67 @@
+@import "index.scss";
+.Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: $header-height;
+  max-width: $max-width;
+  margin: 0px auto;
+  align-items: center;
+
+  .NavBar {
+    ul {
+      li {
+        display: inline-block;
+        margin-right: 30px;
+
+        &:last-child {
+          margin-right: 0px;
+        }
+
+        a {
+          display: inline-block;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 28px;
+          color: $light-black;
+          text-decoration: none;
+          font-weight: 500;
+
+          &:hover {
+            text-decoration: underline;
+            color: $black;
+          }
+        }
+      }
+      li.SelectedItem {
+        a {
+          font-weight: 700;
+          color: $black;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-medium) {
+    .NavBar {
+      margin-left: 10px;
+    }
+    .ActionBar {
+      margin-right: 10px;
+    }
+  }
+
+  @media (max-width: $breakpoint-small) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    height: auto;
+
+    .NavBar {
+      margin: 10px 0 10px 20px;
+    }
+    .ActionBar {
+      margin: 10px 0 10px 10px;
+    }
+  }
+}

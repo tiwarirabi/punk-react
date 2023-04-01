@@ -1,0 +1,33 @@
+@import "index.scss";
+
+.Container {
+  color: $text-color;
+  max-width: $max-width;
+  margin: 0px auto;
+
+  .ListContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+
+    @media (max-width: $breakpoint-medium) {
+      grid-template-columns: 1fr;
+      margin: 0px 10px;
+    }
+  }
+
+  .FetchMoreContainer {
+    text-align: center;
+    margin: 28px 0px;
+
+    .FetchMoreButton {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 28px;
+      color: $primary-blue;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+}

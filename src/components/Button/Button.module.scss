@@ -1,0 +1,31 @@
+@import "index.scss";
+
+.Button {
+  min-width: 135px;
+  text-align: center;
+  padding: 8px 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 10px;
+  border: 0px;
+  border-radius: $border-radius-small;
+}
+
+.Button.Primary {
+  color: $light-gray;
+  background-color: $primary-blue;
+
+  &:hover {
+    background-color: $hover-primary-blue;
+  }
+}
+
+.Button.Secondary {
+  color: $light-black;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $light-gray;
+  }
+}
