@@ -4,11 +4,13 @@ import { withBeers } from "store/Beer";
 import { IBeer, IBeersProps } from "types";
 import Button from "components/Button/Button";
 
+import BeerImage from 'beer.png';
+
 import styles from "./AddBeerModal.module.scss";
 
 const getInitialBeer = (): IBeer => ({
   id: new Date().getTime(),
-  image_url: "./images/beer.png",
+  image_url: BeerImage,
   name: "",
   description: "",
   tagline: "",
