@@ -2,7 +2,7 @@
   "name": "punk-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "",
+  "homepage": "/punk-react",
   "PUBLIC_URL": "/punk-react",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",

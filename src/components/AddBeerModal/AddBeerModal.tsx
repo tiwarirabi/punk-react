@@ -8,7 +8,7 @@ import styles from "./AddBeerModal.module.scss";
 
 const getInitialBeer = (): IBeer => ({
   id: new Date().getTime(),
-  image_url: "/images/beer.png",
+  image_url: "./images/beer.png",
   name: "",
   description: "",
   tagline: "",
@@ -38,7 +38,7 @@ const AddBeerModal = (props: IBeersProps) => {
           <form onSubmit={onSave}>
             <h1>Add a New Beer</h1>
             <div className={styles.ImageContainer}>
-              <img src="/images/beer.png" alt="beer" />
+              <img src={beer.image_url} alt="beer" />
             </div>
 
             <input
