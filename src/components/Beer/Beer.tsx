@@ -4,6 +4,8 @@ import { Tooltip } from "react-tooltip";
 import { IBeer } from "types";
 import styles from "./Beer.module.scss";
 
+import BeerImage from 'beer.png';
+
 interface IBeerProps {
   beer: IBeer;
 }
@@ -30,7 +32,7 @@ const Beer = (props: IBeerProps) => {
         className={styles.ImageContainer}
         data-tooltip-id={id.toString()}
       >
-        <img src={image_url} alt={name} />
+        <img src={image_url || BeerImage} alt={name} />
       </section>
       <section className={styles.DescriptionContainer}>
         <div className={styles.Name}>{name}</div>
