@@ -11,7 +11,7 @@ import { IBeersProps } from "types";
 import styles from "./Beers.module.scss";
 
 const Beers = (props: IBeersProps) => {
-  const { beers, fetchBeers, fetchingBeers } = props.beers;
+  const { beers, fetchBeers, fetchingBeers, hasMoreBeersToFetch } = props.beers;
 
   useEffect(() => {
     if (!beers.length) fetchBeers();
@@ -23,11 +23,11 @@ const Beers = (props: IBeersProps) => {
       <section className={styles.FetchMoreContainer}>
         {fetchingBeers ? (
           <Spinner />
-        ) : (
+        ) : hasMoreBeersToFetch ? (
           <button className={styles.FetchMoreButton} onClick={fetchBeers}>
             Load more beers <FontAwesomeIcon icon={faChevronDown} />
           </button>
-        )}
+        ) : null}
       </section>
     </section>
   );

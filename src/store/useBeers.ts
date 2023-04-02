@@ -12,6 +12,7 @@ const useBeers = (
   const [nextPageNumber, setNextPageNumber] = useState<number>(startPage);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
+  const [hasMoreBeersToFetch, setHasMoreBeersToFetch] = useState<boolean>(true);
 
   const fetchBeers = () => {
     setLoading(true);
@@ -22,8 +23,12 @@ const useBeers = (
       .then((response) => response.json())
       .then((result: IBeer[]) => {
         setNextPageNumber(nextPageNumber + 1);
+        
+        if (result && Array.isArray(result)) {
+          setBeers([...beers, ...result]);
+          setHasMoreBeersToFetch(result.length === DEFAULT_PER_PAGE);
+        }
 
-        setBeers([...beers, ...result]);
       })
       .catch(setError)
       .finally(() => {
@@ -31,7 +36,7 @@ const useBeers = (
       });
   };
 
-  return { fetchBeers, beers, loading, error };
+  return { fetchBeers, beers, loading, error, hasMoreBeersToFetch };
 };
 
 export default useBeers;

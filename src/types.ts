@@ -39,6 +39,7 @@ export interface IBeerStore {
   fetchingBeers: boolean,
   beers: IBeer[];
   myBeers: IBeer[];
+  hasMoreBeersToFetch: boolean;
 
   showingAddBeerModal: boolean;
   toggleAddBeerModal: () => void;

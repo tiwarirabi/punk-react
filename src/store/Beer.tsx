@@ -11,6 +11,7 @@ const initialBeerStore: IBeerStore = {
   fetchingBeers: false,
   beers: [],
   myBeers: [],
+  hasMoreBeersToFetch: true,
 
   showingAddBeerModal: false,
   toggleAddBeerModal: () => {},
@@ -28,12 +29,13 @@ export const BeerProvider = (props: any) => {
     initialBeerStore.showingAddBeerModal
   );
 
-  const { fetchBeers, beers, loading: fetchingBeers, error } = useBeers();
+  const { fetchBeers, beers, loading: fetchingBeers, error, hasMoreBeersToFetch } = useBeers();
 
   const value = {
     fetchingBeers,
     beers,
     fetchBeers,
+    hasMoreBeersToFetch,
 
     myBeers,
     saveBeer: (beer: IBeer) => setMyBeers([...myBeers, beer]),
