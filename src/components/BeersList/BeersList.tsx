@@ -16,8 +16,8 @@ const BeersList = (props: IProps) => {
     return (<section className={`${styles.ListContainer} ${
         beers.length === 1 ? styles.SingleInListContainer : ""
       }`}>
-        {beers.map((beer) => (
-            <Beer beer={beer} />
+        {beers.map((beer, index) => (
+            <Beer beer={beer} key={index} />
         ))}
     </section>);
 }
