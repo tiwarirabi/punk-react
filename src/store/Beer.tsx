@@ -2,6 +2,7 @@ import React, { createContext, useState } from "react";
 
 import useBeers from "store/useBeers";
 import { IBeer, IBeerStore } from "../types";
+import usePersistedState from "./usePersistedState";
 
 const initialBeerStore: IBeerStore = {
   fetchBeers: () => {},
@@ -21,7 +22,8 @@ export const BeerContext: React.Context<IBeerStore> =
 export const BeerProvider = (props: any) => {
   const { children } = props;
 
-  const [myBeers, setMyBeers] = useState<IBeer[]>([]);
+  const [myBeers, setMyBeers] = usePersistedState<IBeer[]>("myBeers", []);
+
   const [showingAddBeerModal, setShowingAddBeerModal] = useState<boolean>(
     initialBeerStore.showingAddBeerModal
   );
