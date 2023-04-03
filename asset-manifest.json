@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/punk-react/static/css/main.7c2490e4.css",
+    "main.css": "/punk-react/static/css/main.86d3b5df.css",
     "main.js": "/punk-react/static/js/main.ab357ebb.js",
     "static/js/787.94fada22.chunk.js": "/punk-react/static/js/787.94fada22.chunk.js",
     "static/media/beer.png": "/punk-react/static/media/beer.32421a699c6f5239942e.png",
     "index.html": "/punk-react/index.html",
-    "main.7c2490e4.css.map": "/punk-react/static/css/main.7c2490e4.css.map",
+    "main.86d3b5df.css.map": "/punk-react/static/css/main.86d3b5df.css.map",
     "main.ab357ebb.js.map": "/punk-react/static/js/main.ab357ebb.js.map",
     "787.94fada22.chunk.js.map": "/punk-react/static/js/787.94fada22.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c2490e4.css",
+    "static/css/main.86d3b5df.css",
     "static/js/main.ab357ebb.js"
   ]
 }
