@@ -26,5 +26,9 @@
     background-color: transparent;
     border: 0px;
     color: #3767b7;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
