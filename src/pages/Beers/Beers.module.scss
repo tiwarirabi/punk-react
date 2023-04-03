@@ -17,6 +17,11 @@
       color: $primary-blue;
       background-color: transparent;
       border-color: transparent;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
