@@ -53,16 +53,13 @@
       line-height: 30px;
       color: #222222;
       margin-bottom: 2px;
+      text-transform: capitalize;
       
       overflow: hidden;
       display: -webkit-box;
       -webkit-line-clamp: 1;
       line-clamp: 1;
       -webkit-box-orient: vertical;
-      
-      &::first-letter {
-        text-transform: uppercase;
-      }
     }
 
     .Type {
